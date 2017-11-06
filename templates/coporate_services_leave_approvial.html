@@ -1,0 +1,51 @@
+    <html>
+
+
+<head>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/resources/demos/style.css" />
+        <script>
+        $(function() {
+            $( "#id_Authoriztaion_date" ).datepicker();
+        });
+        </script>
+
+	
+
+<style type ="text/css">
+
+#main{
+width:910px;
+height:620px;
+margin:30px auto
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Please fill up all the necessary fields before submitting your leave Application</p>
+{%endblock%}
+
+{%block content %}
+
+<p class="text-primary"><span class="glyphicon glyphicon-check"></span> Please note that the Authorized Date has to be in the format:Year-Month-Day/2017-08-02</p>
+<div id="main">
+<form action ="" method="post">{%csrf_token%}
+<table>
+{{form.as_table}}
+</table>
+<br>
+<input type="submit" name="submit" value="Authorized Leave" >  
+</form>
+</div>
+
+{% endblock %}
+</html>
+</body>

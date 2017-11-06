@@ -1,0 +1,65 @@
+    <html>
+
+
+<head>
+	
+
+<style type ="text/css">
+able, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #999999;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Please fill up all the necessary fields before submitting your leave Application</p>
+{%endblock%}
+
+{%block content %}
+
+
+<table id="t01">
+<tr>
+   <th>Select Department for leave approveal</th>
+    <td><a href ="/Gov11/"><input type="checkbox" onClick="parent.location='#'" >GOV (Department) </a></td>
+          <td><a href ="/fmkd11/"><input type="checkbox" onClick="parent.location='#'" >FMKD (Department)</a></td> 
+                <td><a href ="/csd11/"><input type="checkbox" onClick="parent.location='#'" >CSD (Department) </a></td> 
+                <td><a href ="/acsd11/"><input type="checkbox" onClick="parent.location='#'" >ACSD (Department) </a></td> 
+           <td><a href ="/rshd11/"><input type="checkbox" onClick="parent.location='#'" >RSD (Department) </a></td> 
+       <td><a href ="/fisd11/"><input type="checkbox" onClick="parent.location='#'" >FISD (Department) </a></td> 
+    
+</tr>
+<tr>
+
+    
+</tr>
+   </table>
+
+
+{% endblock %}
+</html>
+</body>

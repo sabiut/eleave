@@ -1,0 +1,37 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+
+#main{
+width:910px;
+height:620px;
+margin:30px auto
+}
+</style>
+
+</head
+<body>
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Successfuly Recorded message</p>
+{%endblock%}
+
+{%block content %}
+
+<h2><center><font color="Orange"><span class="glyphicon glyphicon-align-justify"></span>  eLeave DashBoard</font></center></h2>
+<hr>
+<div class="well well-lg">
+<div id="main">
+<p class="text-primary">Congratulations! You are almost done.</p><br>
+<h3>Please click <a href ="/email_authorizer/">Here</a> for authorization</h3>
+</div>
+</div>
+
+{% endblock %}
+</html>
+</body>

@@ -1,0 +1,84 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #999999;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Governor's Office Staff Leave History</p>
+{%endblock%}
+
+{%block content %}
+<table id="t01" >
+<tr>
+<th>Select</th>
+   <th>username</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Position</th>
+  <th>Department</th>
+  <th>Leave Type</th>
+  <th>Details</th>
+  <th>Start Date</th>
+  <th>End Date</th>
+  <th>Authorization</th>
+  <th>Authorize By</th>
+  <th>Remarks</th>
+  <th>Authorized Date</th>
+  
+</tr>
+{%for a in leaves%}
+<tr>
+<td><a href ="#"><input type="checkbox" onClick="parent.location='#'" > </a> </td>
+<td>{{a.username}}</td>
+<td>{{a.First_Name}}</td>
+  <td>{{a.Last_Name}}</td>
+  <td>{{a.position}}</td>
+  <td>{{a.department}}</td>
+<td>{{a.leave_type}}</td>
+  <td>{{a.Specify_details}}</td>
+  <td>{{a.start_Date}}</td>
+  <td>{{a.end_date}}</td>
+  <td>{{a.authorization}}</td>
+  <td>{{a.authorized_by}}</td>
+  <td>{{a.remarks}}</td>
+  <td>{{a.authorizaion_date}}</td>
+
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>

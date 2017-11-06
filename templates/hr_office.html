@@ -1,0 +1,191 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <style type ="text/css">
+        #header {
+                        background-color:#11584A;
+                        color:white;
+                        text-align:center;
+                        padding:5px;
+                        width:2413px
+                        }
+        #nav {
+                    line-height:30px;
+                    background-color:#A3F679;
+                    height:1900px;
+                    width:300px;
+                    float:left;
+                    padding:55px;
+                    }
+
+        #section {
+                        width:1480px;
+                        float:left;
+                        padding:20px;
+
+                        }
+        #footer {
+                        background-color:#11584A;
+                        color:white;
+                        clear:both;
+                        text-align:center;
+                        padding:5px;
+                        width:2413px
+                        }
+
+        #user{
+                    float:left;
+                    }
+
+</style>
+</head>
+
+<body>
+<div id="header">
+
+<h1>RBV eLeave Management System</h1>
+ <p>{%block username%}Welcome {{full_name}} :) How're you doing?{%endblock%} </p>
+</div>
+
+
+<div id="nav">
+<hr>
+<font color="Orange"><a href ="/eLeave/loggedin/"<span class="glyphicon glyphicon-home"></span> Home</a></font><br>
+
+<a href ="/eLeave/"><span class="glyphicon glyphicon-log-out"> </span> Logout</a><br>
+
+
+
+<!--
+<font color="Orange">Approved Leave</font><br>
+<a href ="/govoffice/">GOV Department</a><br>
+<a href ="/fmdkoffice/">FMKD Department</a><br>
+<a href ="/csdoffice/">CSD Department </a><br>
+<a href="/acsdoffice/">ACSD Department</a><br>
+<a href ="/rshdoffice/">RSHD Department</a><br>
+<a href ="/fisdoffice/">FISD Department </a><br>-->
+<!--
+<hr>
+<font color="Orange">HR Office</font><br>
+<a href="/displaycurrentbalance/"><span class="glyphicon glyphicon-sound-6-1 "></span>  Calculate Balance</a><br>
+<a href="/importleavebalance/"> <span class="glyphicon glyphicon-paste"></span>  Populate leave Balance</a></br>
+<a href="/uploadfunc/"> <span class="glyphicon glyphicon-level-up"></span>  File Upload</a></br>
+
+<a href="/leave_info/"><span class="glyphicon glyphicon-book"></span> Leave Applications</a><br>
+<a href="/view_leave_info"><span class="glyphicon glyphicon-pencil"></span> Edit Leave</a></br>
+-->
+<hr>
+<font color="Orange">Staff Information</font><br>
+<a href ="/newstaff/"><span class="glyphicon glyphicon-plus"></span> Add new staff </a><br>
+<a href="/dispay_staff/"><span class="glyphicon glyphicon-search"></span>  View staff info</a><br>
+<a href="/dispay_staff_training/"><span class="glyphicon glyphicon-education"></span> Education History</a><br>
+<a href="/dispay_staff_employment/"><span class="glyphicon glyphicon-stats">  Employment History</a><br>
+<hr>
+
+<font color="Orange">Leave Payout</font><br>
+<a href="/leave_payout/"><span class="glyphicon glyphicon-list"></span> Encashments</a><br>
+<hr class="my-10">
+
+
+
+</div>
+
+<div id="section">
+<h2><center><font color="Orange"> <span class="glyphicon glyphicon-align-justify "></span>  eLeave DashBoard</font></center></h2>
+<hr>
+<!--start well-->
+<div class="well">
+  <ul class="nav nav-tabs">
+    <li role="presentation" ><a href="/displaycurrentbalance/"><span class="glyphicon glyphicon-sound-6-1 "></span> Calculate Balance</a></li>
+
+
+    <li role="presentation"><a href="/write_todatabase/"><span class="glyphicon glyphicon-paste"></span> Populate Leave Balance</a></li>
+    <li role="presentation"><a href="/uploadfunc/"><span class="glyphicon glyphicon-level-up"></span> Upload File</a></li>
+    <li role="presentation"><a href="/leaveapp/"><span class="glyphicon glyphicon-book"> Leave Applications</a></li>
+    <li role="presentation"><a href="/view_leave_info/"><span class="glyphicon glyphicon-pencil"></span> Edit Leave</a></li>
+    <li role="presentation"><a href="/rejected_leaves/"><span class="glyphicon glyphicon-ban-circle"></span> Rejected Leaves<font color ="green">({{reject_all}})</font></a></li>
+    <!--  <li role="presentation"><a href="/rejected_leaves/"><span class="glyphicon glyphicon-ban-circle"></span> Rejected Leaves <font color="green">({{reject}})</font></a></li>-->
+  </ul>
+  <ul class="nav nav-tabs">
+    <li role="presentation"><a href="/display_processbal/"><span class="glyphicon glyphicon-ok"></span> <font color="red">GOV Processed Leaves</font> <font color="green">({{process}})</font></a></li>
+    <li role="presentation"><a href="/display_processfisd/"><span class="glyphicon glyphicon-ok"></span> <font color="red">FISD Processed Leaves</font> <font color="green">({{process_FISD}})</font></a></li>
+    <li role="presentation"><a href="/display_processrsd/"><span class="glyphicon glyphicon-ok"></span> <font color="red">RSD Processed Leaves</font> <font color="green">({{process_RSD}})</font></a></li>
+    <li role="presentation"><a href="/display_processcsd/"><span class="glyphicon glyphicon-ok"></span> <font color="red">CSD Processed Leaves </font><font color="green">({{process_CSD}})</font></a></li>
+    <li role="presentation"><a href="/display_processacsd/"><span class="glyphicon glyphicon-ok"></span> <font color="red">ACSD Processed Leaves</font> <font color="green">({{process_ACSD}})</font></a></li>
+    <li role="presentation"><a href="/display_processfmd/"><span class="glyphicon glyphicon-ok"></span> <font color="red">FMD Processed Leaves </font><font color="green">({{process_FMD}})</font></a></li>
+  </ul>
+</div><!--end well-->
+
+
+
+
+
+{% block content%}
+<!--<p><center> <b>User Guide </b></center></p>-->
+
+<div class="container">
+<div class="jumbotron">
+<!--  <h2 class="display-3">Leave Application Guide</h2>-->
+  <ul class="list-group">
+  <li class="list-group-item active active btn btn-primary btn-lg"><span class="glyphicon glyphicon-tag" > </span> Leave Application Guide</li>
+  <h3>Add new staff</h3>
+  <li class="list-group-item">1. From the left menu under staff infomation, click on <font color="red">Add new staff</font>.<br></li>
+  <li class="list-group-item">2. Once you click on the add new staff link, you will be directed to the staff infomation form.<br> </li>
+  <li class="list-group-item">3. Fill up all the nessary details and click on the <font color="red">save record</font> button.<br></li>
+  <li class="list-group-item">4. You will then be redirected to <font color="red">training history form</font><br></li>
+  <li class="list-group-item text-danger" >5. Fill up all the necessary fields and then save the record.</br></li>
+  <li class="list-group-item">6. After saving the record will now be directed to the last form (employee form)<br></li>
+  <li class="list-group-item">7. Fill up all the nessary details and then save the records.<br></li>
+  <li class="list-group-item">8. All the new staff information should now be save into the backend database.<br></li>
+
+
+
+</ul>
+  <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-save" > </span>Download PDF Guide</a>
+  </p>
+
+<h3>View Report</h3>
+To view the three reports <font color="red">(View staff info ),(Training History),(Employment History)</font>you just have to click on the report links located at the left hand side menu.
+
+<h3>Generating current Leave Balance</h3>
+
+1)Click on the leave info link from the left hand side menu.This will take you to the list of all the staff who have apply for the leave.<br>
+2) Click on the leave calculator check box for the staff that you want to generate his/her current leave balance, This will take you to the leave calculator form.<br>
+3) Fill up all the necessary fields and then click on <font color="red">calculate current balance</font><br>
+4) The eLeave system should now generate the current leave balance of the staff that you have selected and store the <font color="red">current leave balance</font> on the backend database.</td>
+<hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-save" > </span>Download PDF Guide</a>
+</p>
+
+</div>
+</div>
+
+
+
+
+
+{%endblock%}
+
+
+</div>
+
+<div id="footer">
+Copyright © RBV eLeave Management System 2014
+</div>
+</body>
+</html>

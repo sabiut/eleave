@@ -1,0 +1,65 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+able, th, td {
+border: 1px solid Orange;
+border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+background-color: #fff;
+}
+table#t01 th {
+color: white;
+background-color: #999999;
+}
+
+
+
+table#t01 {
+width: 100%;
+background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Please fill up all the necessary fields before submitting your leave Application</p>
+{%endblock%}
+
+{%block content %}
+
+<div class="well"><!--start Well-->
+<table id="t01">
+<tr>
+<th>Select Department to Authorize Leave</th>
+<td><a href ="/department_to_approve_leavegov1/"><span class="glyphicon glyphicon-random"></span> GOV (Department) </a></td>
+      <td><a href ="/department_to_approve_leavefmd1/"><span class="glyphicon glyphicon-random"></span> FMKD (Department)</a></td>
+            <td><a href ="/department_to_approve_leavecsd1/"><span class="glyphicon glyphicon-random"></span> CSD (Department) </a></td>
+            <td><a href ="/department_to_approve_leaveacsd1/"><span class="glyphicon glyphicon-random"></span> ACSD (Department) </a></td>
+       <td><a href ="/department_to_approve_leavearsd1/"><span class="glyphicon glyphicon-random"></span> RSD (Department) </a></td>
+   <td><a href ="/department_to_approve_leaveafisd1/"><span class="glyphicon glyphicon-random"></span> FISD (Department) </a></td>
+
+</tr>
+<tr>
+
+
+</tr>
+</table>
+</div><!--end well-->
+
+{% endblock %}
+</html>
+</body>

@@ -1,0 +1,114 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "hr_office.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Governor's Office Staff Leave History</p>
+{%endblock%}
+
+{%block content %}
+<table id="t01" >
+<tr>
+<!--<th>Select</th>-->
+<!--<th>Id</th>-->
+<!--<th>Username</th>-->
+ <th>Calculator Leave</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Position</th>
+  <th>Department</th>
+  <th>Leave Type</th>
+  <th>Details</th>
+  <th>Start Date</th>
+  <th>End Date</th>
+  <th>Total working days</th>
+  <th>Department Head Authorization</th>
+  <th>Authorize By</th>
+  <th>Remarks</th>
+  <th>Authorized Date</th>
+  <th>Corporate services Authorization</th>
+  <th> Authorized By</th>
+  <th>Remarks</th>
+  <th>Authorized Date</th>
+  <th>Month</th>
+  <th>Year</th>
+  <th>Total Leave Entitlement</th>
+  <th> Holiday</th>
+  <th>Weekend</th>
+  <th>Leave Total Balance</th>
+  <th>Leave Current Balance</th>
+  
+  
+</tr>
+{%for a in leave_in%}
+<tr>
+<!--<td><a href ="#"><input type="checkbox" onClick="parent.location='#'" > </a> </td>-->
+<!--<td>{{a.id}}</td>-->
+<!--<td><a href ="/update_form/{{ a.id}}/">{{a.username}}</a></td>-->
+
+<td><a href ="/update_Leaveform/{{ a.id}}/"><input type="checkbox" onClick="parent.location='#'" > </a> </td>
+<td>{{a.first_name}}</td>
+  <td>{{a.last_name}}</td>
+  <td>{{a.position}}</td>
+  <td>{{a.department}}</td>
+<td>{{a.leave_type}}</td>
+  <td>{{a.specify_details}}</td>
+  <td>{{a.start_date}}</td>
+  <td>{{a.end_date}}</td>
+  <td>{{a.total_working_days}}</td>
+  <td>{{a.department_head_authorization}}</td>
+  <td>{{a.authorized_by}}</td>
+  <td>{{a.remarks}}</td>
+  <td>{{a.authorization_date}}</td>
+  <td>{{a.corporate_services_authorization}}</td>
+  <td>{{a.corporate_services_authorization_by}}</td>
+  <td>{{a.corporate_servicesre_remarks}}</td>
+  <td>{{a.corporate_services_authoriztaion_date}}</td>
+  <td>{{a.month}}</td>
+  <td>{{a.year}}</td>
+  <td>{{a.leave_entitlement}}</td>
+  <td>{{a.holiday}}</td>
+  <td>{{a.weekend}}</td>
+  <td>{{a.leave_outstanding_balance}}</td>
+  <td>{{a.leave_current_balance}}</td>
+  
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>

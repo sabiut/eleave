@@ -1,0 +1,97 @@
+<html>
+
+
+<head>
+
+  <!-- Modal jquery popup start-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write eleave data to database</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        Accept: function(){
+         window.location.href = "/importleavebalance/";
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+  </script>
+
+  <!-- Modal jquery popup end-->
+
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+}
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+{% extends "hr_office.html"%}
+
+
+
+
+{%block username%}
+<!-- Modal -->
+
+
+
+<!-- Modal jquery popup start-->
+<div id="dialog-confirm" title="Populate Database?">
+<p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>This will write to database. Are you sure?</p>
+
+</div>
+
+
+
+<!-- modals jquery popup start end-->
+{%endblock%}
+
+{%block content %}
+
+<div class="alert alert-danger">
+  <strong>Warning!</strong> This action will write data into the database.Please ensure that you know what your are doing before you accept this action!
+</div>
+
+
+
+
+{% endblock %}
+</html>
+</body>

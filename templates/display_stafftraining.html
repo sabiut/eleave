@@ -1,0 +1,82 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "hr_office.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Staff Lining History</p>
+{%endblock%}
+
+{%block content %}
+<p> Below you can view the list of all the Staff Lining History</p>
+<table id="t01" >
+<tr>
+<!--<th>Save CSV File</th>-->
+<th>Select to edit</th>
+<th>Staff Name</th>
+<th>Institution # 1</th>
+<th>Qualification # 1</th>
+<th>Year of completion # 1</th>
+<th>Institution # 2</th>
+<th>Qualification # 2</th>
+<th>Year of completion # 2</th>
+<th>Institution # 3</th>
+<th>Qualification # 3</th>
+<th>Year of completion # 3</th>
+<th>Highest Qualification</th>
+</tr>
+{%for x in training_his%}
+
+<tr>
+<!--<td><a href="/training_history_csv/">Save CSV</a></td>-->
+<td><a href ="/edit_stafftraining/{{x.id}}/"><input type="checkbox"onClick="parent.location='#"> </a> </td>
+<td>{{x.staff_name}}</td>
+<td>{{x.institution_num1}}</td>
+  <td>{{x.qualification_num1}}</td>
+  <td>{{x.year_of_completion_num1}}</td>
+  <td>{{x.institution_num2}}</td>
+  <td>{{x.qualification_num2}}</td>
+  <td>{{x.year_of_completion_num2}}</td>
+   <td>{{x.institution_num3}}</td>
+   <td>{{x.qualification_num3}}</td>
+   <td>{{x.year_of_completion_num3}}</td>
+   <td>{{x.highest_qualification}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>

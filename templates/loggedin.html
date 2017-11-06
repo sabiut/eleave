@@ -1,0 +1,244 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+
+
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme --><!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+-->
+<!-- Latest compiled and minified JavaScript -->
+<!--
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+-->
+
+    <style type ="text/css">
+        #header {
+                        background-color:Brown;
+                        color:white;
+                        text-align:center;
+                        padding:5px;
+                        }
+        #nav {
+                    line-height:30px;
+                    background-color:#D7D2D2;
+                    height:850px;
+                    width:270px;
+                    float:left;
+                    padding:55px;
+                    }
+
+        #section {
+                        width:900px;
+                        float:left;
+                        padding:20px;
+
+                        }
+        #footer {
+                        background-color:Brown;
+                        color:white;
+                        clear:both;
+                        text-align:center;
+                        padding:5px;
+                        }
+
+        #user{
+                    float:left;
+                    }
+
+
+   <!--User Guide Table-->
+table, th, td {
+    border: 2px solid EFF5F7;
+    border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #BCDDEA;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #A3F679;
+}
+table#t01 th {
+    color: white;
+    background-color: Brown;
+}
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div id="header">
+
+<h1><span class="glyphicon glyphicon-blackboard"></span> RBV eLeave Management System</h1>
+ <p>{%block username%}Welcome {{full_name}} :) How're you doing?{%endblock%} </p>
+
+</div>
+</nav>
+
+
+<div id="nav">
+  <br><br>
+<font color="Orange"><a href ="/eLeave/loggedin/"><span class="glyphicon glyphicon-home"></span>  Home</a></font><br>
+<!--<font color="Orange"><a href ="/page_to_approve_leave/">Authorize Leave</a></font><br>-->
+<a href ="/eLeave/"> <span class="glyphicon glyphicon-link"></span>  Logout</a><br>
+<a href ="/admin/"><span class=" glyphicon glyphicon-cog"></span>  Admin Site</a><br>
+
+<hr>
+<font color="Orange">Leave Authorazation</font><br>
+<!--<a href ="/department_to_approve_leave/"><span class="  glyphicon glyphicon-lock"></span>  Unit Manager </a><br>
+<a href ="/coporateservices_authorization/"><span class=" glyphicon glyphicon-lock"></span>  Department Director </a><br>
+-->
+<a href ="/unit_department_to_approve_leave/"><span class="  glyphicon glyphicon-lock"></span>  Unit Manager </a><br>
+<a href ="/unit_director_to_approve_leave/"><span class=" glyphicon glyphicon-lock"></span>  Department Director </a><br>
+
+
+<!--<a href ="/govoffice/">GOV Dept</a><br>
+<a href ="/fmdkoffice/">FMKD Dept</a><br>
+<a href ="/csdoffice/">CSD Dept </a><br>
+<a href="/acsdoffice/">ACSD Dept</a><br>
+<a href ="/rshdoffice/">RSHD Dept</a><br>
+<a href ="/fisdoffice/">FISD Dept </a><br>-->
+<hr>
+<font color="Orange">HR Office</font><br>
+<!--<a href ="/dispay_staff/">Staffs Info</a><br>
+<a href="/leave_info/">Leave Info</a><br>
+
+<a href ="/newstaff/">Edit Staff </a>
+<a href="/leaveapplication/">Leave Form</a>-->
+
+<a href="/hroffice/"><span class="glyphicon glyphicon-lock"></span> Manage Leave</a><br>
+<hr>
+<font color="Orange">Leave Application </font><br>
+<a href="/leaveapplication/"><span class="glyphicon glyphicon-book"></span> Application Form</a><br>
+<hr>
+<font color="Orange">Current Balance</font></br>
+<a href="/leave_balance/"> <span class="glyphicon glyphicon-menu-hamburger"></span>   Leave Balance</a></br>
+<a href="/staffbalance_report/"> <span class="glyphicon glyphicon-lock"></span>   Leave Balance Report</a></br>
+
+<!--<a href="/#/">testing span</a><br>-->
+
+<hr>
+<font color="Orange">Accounts Department</font></br>
+<a href="/encash/"> <span class="glyphicon glyphicon-lock"> </span>   Leave Encashment</a></br>
+<!--<a href="/#/">testing span</a><br>-->
+
+
+</div>
+<div id="section">
+<h2><center><font color="Orange"><span class="glyphicon glyphicon-align-justify"></span>  eLeave DashBoard</font></center></h2>
+<hr>
+{% block content%}
+<!--<p><center> <b>User Guide </b></center></p>-->
+
+<div class="container">
+<div class="jumbotron">
+<!--  <h2 class="display-3">Leave Application Guide</h2>-->
+  <ul class="list-group">
+  <li class="list-group-item active active btn btn-primary btn-lg"><span class="glyphicon glyphicon-tag" > </span> Leave Application Guide</li>
+  <li class="list-group-item">1. Under Leave Application, Click on Application Form.</li>
+  <li class="list-group-item">2. You should now see the leave application form once you click on the Application Form. </li>
+  <li class="list-group-item">3. Fill out all the nessary fields on the leave application form, then click on Apply for leave button at the bottom.Follow the next screen to complete your leave application.</li>
+  <li class="list-group-item">4. Please note that on the department field, fill out your department field with this format: ACSD,GOV,CSD,FISD,RSD,FMKD.Only pick department that involves you.</li>
+  <li class="list-group-item text-danger" >5. The start date and end date field, should be in this format: Year-Month-Day eg:2015-2-15</li>
+  <li class="list-group-item">6. In the Total working days field, Please exclude Holidays and Weekends</li>
+</ul>
+  <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-save" > </span>Download PDF Guide</a>
+  </p>
+</div>
+
+
+<div class="jumbotron">
+  <!--<h2 class="display-3">Leave Authorization Guide</h2>-->
+  <ul class="list-group">
+  <li class="btn btn-primary btn-lg list-group-item active"><span class="glyphicon glyphicon-tag" > </span> Leave Authorization Guide</li>
+  <li class="list-group-item">1. Once you have received leave notification from email, Login in to .</li>
+  <li class="list-group-item">2. If you are the department head, click on the department head link and then click on the department that involves you. Then click on the leave applicant to approve the leave. The department head authorization field should be in the format: Approved or in the format: Rejected Authorization date should be in the format: Year-Month-Day eg:2015-2-15.  </li>
+  <li class="list-group-item">3. If you are the department Director, click on the Coporate Services link and then click on the department that involves you. Then click on the leave applicant to approve the leave. The Corporate services authorization field should be in the format: Approved or in the format: Rejected Authorization date should be in the format: Year-Month-Day eg:2015-2-15.</li>
+  <li class="list-group-item">4. The Leave Applicant will be notify automatically via email once the department head and the department director approves the leave.</li>
+  <li class="list-group-item text-danger" >5. The eLeave system will automatically calculate the current leave balance and store it in the database.</li>
+
+</ul>
+<hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-save" > </span>Download PDF Guide</a>
+  </p>
+</div>
+
+</div>
+
+
+
+<!--
+<table class ="table table-striped"id="t01">
+  <tr>
+    <th>Leave Application Guide</th>
+    <th>Leave Authorization Guide</th>
+  </tr>
+  <tr>
+  <td>1. Under Leave Application, Click on Application Form.</td>
+  <td>1. Once you have received leave notification from email, Login in to <font color="red">http://10.0.138.41:8000/eLeave</font></td>
+  </tr>
+  <tr><td>2. You should now see the leave application form once you click on the Application Form. </td>
+         <td>2. If you are the department head, click on the department head link and then click on the department that involves you. Then click on the leave applicant to approve the leave.
+                     The department head authorization field should be in the format: <font color="red">Approved</font> or in the format: <font color="red">Rejected</font> Authorization date should be in the format:
+                     <font color="red">Year-Month-Day</font> eg:2015-2-15.
+                   </td>
+  </tr>
+  <tr><td>3. Fill out all the nessary fields on the leave application form, then click on <font color="red">Apply for leave</font> button at the bottom.Follow the next screen to complete your leave application.</td>
+            <td>3. If you are the department Director, click on the Coporate Services  link and then click on the department that involves you.
+            Then click on the leave applicant to approve the leave.
+            The Corporate services authorization field should be in the format:<font color="red"> Approved </font>or in the format: <font color="red">Rejected</font> Authorization date should be in the format: <font color="red">Year-Month-Day</font> eg:2015-2-15.</td>
+            </tr>
+  <tr><td>4. Please note that on the department field, fill out your department field with this format: <font color="red">ACSD,GOV,CSD,FISD,RSHD,FMKD</font>.Only pick department that involves you.</td>
+           <td>4. The Leave Applicant will be notify automatically via email once the department head and the department director approves the leave.</td>
+  </tr>
+  <tr><td>5. The start date and end date field, should be in this format: <font color="red">Year-Month-Day</font> eg:2015-2-15</td>
+           <td>5. The eLeave system will automatically calculate the current leave balance and store it in the database.</td>
+  </tr>
+  <tr><td>6. In the Total working days field, Please exclude <font color="red">Holidays and Weekends</font></td>
+         <td></td>
+  </tr>
+
+
+
+</table>
+-->
+<marquee behavior="scroll" direction="left"><h4 class="text-primary">You will be notify by email once your leave application have been approved. </h4></marquee>
+{%endblock%}
+
+</div>
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+<div id="footer" >
+Copyright © RBV eLeave Management System 2014
+</div>
+
+
+
+</body>
+</html>

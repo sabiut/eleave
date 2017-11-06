@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+  <body>
+
+  {%extends "hr_office.html"%}
+
+
+         {%block content%}
+
+         <!--Welcome: {{full_name }}-->
+         <div class="well">
+          <h3 class="sub-header">Manage Staff Leave <span class="glyphicon glyphicon-chevron-down"></span></h3></div>
+        <div class="well">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+
+                  <th># Action</th>
+                  <th> Leave Applications <font color="red"> Inbox({{test}})</font></th>
+                  <!--<th>Deal Processng <font color="orange">({{test1}} New Deal)</font></th>
+                  <th>Revise Deals <font color="red">({{test2}} New Deal)</font></th>-->
+                  <th> GOV Approved Leaves <font color="green"> Inbox({{gov}})</font></th>
+                  <th> FISD Approved Leaves <font color="green"> Inbox({{fisd}})</font></th>
+                  <th> RSD Approved Leaves<font color="green"> Inbox({{rsd}})</font></th>
+                  <th> CSD Approved Leaves<font color="green"> Inbox({{csd}})</font></th>
+                  <th> ACSD Approved Leaves<font color="green"> Inbox({{acsd}})</font></th>
+                  <th> FMD Approved Leaves<font color="green"> Inbox({{fmd}})</font></th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td><span class="glyphicon glyphicon-chevron-right"></span></td>
+
+                  <td> <span class="glyphicon glyphicon-new-window"></spam> <a href ="/leave_info/"> View Leaves</a></td>
+
+                  <!--<td> <span class="glyphicon glyphicon-menu-hamburger"></spam> <a href ="#">Processing</a></td>
+
+                  <td><span class="glyphicon glyphicon-edit"></span><a href ="#"> Update</a></td>-->
+                  <td><span class="glyphicon glyphicon-zoom-in"></span> <a href ="/govoffice/">Generate Balance</a></td>
+                  <td><span class="glyphicon glyphicon-zoom-in"></span> <a href ="/fisdoffice/">Generate Balance</a></td>
+                  <td><span class="glyphicon glyphicon-zoom-in"></span> <a href ="/rshdoffice/">Generate Balance</a></td>
+                  <td><span class="glyphicon glyphicon-zoom-in"></span> <a href ="/csdoffice/">Generate Balance</a></td>
+                  <td><span class="glyphicon glyphicon-zoom-in"></span> <a href ="/acsdoffice/">Generate Balance</a></td>
+                  <td><span class="glyphicon glyphicon-zoom-in"></span> <a href ="/fmdkoffice/">Generate Balance</a></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div> <!--end well-->
+          {%endblock%}
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

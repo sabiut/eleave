@@ -1,0 +1,94 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "hr_office.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Staff Leave History</p>
+{%endblock%}
+
+{%block content %}
+
+ <h4> <a href="/staff_info_csv/"><span class="glyphicon glyphicon-save"></span> Download </a></h4>
+
+<table id="t01" >
+<tr>
+<!--<th> Save CSV File</th>-->
+<th>Select to edit</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Gender</th>
+<th>Date of Birth</th>
+<th>Marital Status</th>
+<th>Nationality</th>
+<th>Home Island</th>
+<th>Dependant</th>
+<th>Relationship to you</th>
+<th>Postal Address</th>
+<th>Employment Date</th>
+<th>Position</th>
+<th>Department</th>
+<th>VNPF N#</th>
+<th>Bank Name</th>
+<th> Account Number</th>
+</tr>
+{%for x in staffs%}
+
+<tr>
+<!--<td><a href ="/staff_info_csv/">Save CSV</a></td>-->
+<td><a href ="/edit_staffinfo/{{ x.id}}/"><span class="glyphicon glyphicon-edit"></span> </a> </td>
+<td>{{x.first_name}}</td>
+  <td>{{x.last_name}}</td>
+  <td>{{x.gender}}</td>
+  <td>{{x.date_of_birth}}</td>
+  <td>{{x.marital_status}}</td>
+  <td>{{x.nationality}}</td>
+   <td>{{x.home_island}}</td>
+   <td>{{x.dependants}}</td>
+   <td>{{x.relationship_to_you}}</td>
+   <td>{{x.postal_Address}}</td>
+   <td>{{x.employee_Date}}</td>
+  <td>{{x.position}}</td>
+  <td>{{x.department}}</td>
+  <td>{{x.vnpf_no}}</td>
+  <td>{{x.bank_name}}</td>
+  <td>{{x.account_number}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>

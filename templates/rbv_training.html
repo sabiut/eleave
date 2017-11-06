@@ -1,0 +1,90 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "hr_office.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Staff Leave History</p>
+{%endblock%}
+
+{%block content %}
+
+<table id="t01" >
+<tr>
+<th>Select to edit</th>
+<th>Staff Name</th>
+<th>RBV Training # 1</th>
+<th>RBV Training # 2</th>
+<th>RBV Training # 3</th>
+<th>RBV Training # 4</th>
+<th>RBV Training # 5</th>
+<th>RBV Training # 6</th>
+<th>RBV Training # 7</th>
+<th>RBV Training # 8</th>
+<th>RBV Training # 9</th>
+<th>RBV Training # 10</th>
+<th>RBV Training # 11</th>
+<th>RBV Training # 12</th>
+<th>RBV Training # 13</th>
+<th>RBV Training # 14</th>
+<th>RBV Training # 15</th>
+</tr>
+{%for x in rbvtraining%}
+
+<tr>
+<td><a href ="/edit_stafftraining/{{x.id}}/"><input type="checkbox"onClick="parent.location='#"> </a> </td>
+<td>{{x.staff_name}}</td>
+<td>{{x.RBV_training1}}</td>
+  <td>{{x.RBV_training2}}</td>
+  <td>{{x.RBV_training3}}</td>
+  <td>{{x.RBV_training4}}</td>
+  <td>{{x.RBV_training5}}</td>
+  <td>{{x.RBV_training6}}</td>
+   <td>{{x.RBV_training7}}</td>
+   <td>{{x.RBV_training8}}</td>
+   <td>{{x.RBV_training9}}</td>
+   <td>{{x.RBV_training10}}</td>
+   <td>{{x.RBV_training11}}</td>
+   <td>{{x.RBV_training12}}</td>
+   <td>{{x.RBV_training13}}</td>
+   <td>{{x.RBV_training14}}</td>
+   <td>{{x.RBV_training15}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>

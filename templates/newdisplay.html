@@ -1,0 +1,99 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #999999;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Staff Leave History</p>
+{%endblock%}
+
+{%block content %}
+
+<table id="t01" >
+<tr>_N
+<th>Select</th>
+<th>Username</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Employment Date</th>
+  <th>Position</th>
+  <th>Department</th>
+  <th>Qualification</th>
+  <th>VNPF N#</th>
+  <th>Salary</th>
+  <th> Monthly Salary</th>
+  <th>Training</th>
+  <th>Leave Type</th>
+  <th>Details</th>
+  <th>Start Date</th>
+  <th>End Date</th>
+  <th>Total Working Hours</th>
+  <th>Authorization</th>
+  <th>Authorize By</th>
+  <th>Remarks</th>
+  <th>Authorized Date</th>
+  
+</tr>
+{%for x in staffs%}
+
+<tr>
+<td><a href ="#"><input type="checkbox"onClick="parent.location='/update_form/'"> </a> </td>
+<td>{{x.username}}</td>
+<td>{{x.first_name}}</td>
+  <td>{{x.last_name}}</td>
+  <td>{{x.employee_Date}}</td>
+  <td>{{x.position}}</td>
+  <td>{{x.department}}</td>
+  <td>{{x.qualification}}</td>
+  <td>{{x.VNPF_no}}</td>
+  <td>{{x.salary}}</td>
+  <td>{{x.montly_salary}}</td>
+  <td>{{x.Training}}</td>
+  <td>{{x.staff_leave.leave_type}}</td>
+  <td>{{x.staff_leave.Specify_details}}</td>
+  <td>{{x.staff_leave.start_Date}}</td>
+  <td>{{x.staff_leave.end_date}}</td>
+  <td>{{x.staff_leavef.total_working_days}}</td>
+  <td>{{x.staff_leave.authorization}}</td>
+  <td>{{x.staff_leave.authorized_by}}</td>
+  <td>{{x.staff_leave.remarks}}</td>
+  <td>{{x.staff_leave.authorizaion_date}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>
