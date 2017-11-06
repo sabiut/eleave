@@ -1,0 +1,71 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+able, th, td {
+border: 1px solid Orange;
+border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+background-color: #fff;
+}
+table#t01 th {
+color: white;
+background-color: #999999;
+}
+
+
+
+table#t01 {
+width: 100%;
+background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Click on your name below to view your leave balance</p>
+{%endblock%}
+
+{%block content %}
+<p>Click on your name below to view your current leave balance. Contact Hr Office if you have any query regarding your leave balance.</p>
+
+<table id="t01">
+<tr>
+<th>Governor's Office</th>
+<tr><td><a href ="/andrea_leavebalance1/">Andrea Molisa</a></td></tr>
+<tr><td><a href ="/Branan_leavebalance1/">Branan Karae </a></td> </tr>
+<tr><td><a href ="/George_leavebalance1/">George Tasso </a></td> </tr>
+   <tr><td><a href ="/kalpeau_leavebalance1/">Kalpeau Lunabek</a></td></tr>
+      <tr><td><a href ="/Linnes_leavebalance1/">Linnes Tarianga</a></td> </tr>
+      <tr><td><a href ="/Michael_leavebalance1/">Michel Hililan</a></td> </tr>
+  <tr>  <td><a href ="/deputyGovernor_leavebalance1/">Peter T. Merakali</a></td></tr>
+<tr><td><a href ="/Governor_leavebalance1/">Simion M. Athy </a></td></tr>
+<tr><td><a href ="/sum_leavebalance1/">Sum Abiut</a></td> </tr>
+<tr><td><a href ="/Tabe_leavebalance1/">Tabe A. Issiah </a></td> </tr>
+<tr><td><a href ="/Tom_leavebalance1/">Tom Warsal </a></td> </tr>
+<tr><td><a href ="/Priscilla_leavebalance1/">Pricilla Kalo </a></td> </tr>
+<tr><td><a href ="/Malon_leavebalance1/">Malon Namak </a></td> </tr>
+
+
+
+</tr>
+
+</table>
+
+
+{% endblock %}
+</html>
+</body>

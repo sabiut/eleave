@@ -1,0 +1,61 @@
+
+
+  {%extends "staffleavebalance.html"%}
+
+            {%block content%}
+
+            <div class="well"><h2 class="sub-header">FMD Staff Leave Balance</h2></div>
+          <div class="table-responsive">
+              <h4> <a href="#"><span class="glyphicon glyphicon-save"></span> Download </a></h4>
+            <table class="table table-striped">
+              <thead>
+                <tr class="danger">
+
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Department</th>
+                  <th>Leave outstanding Balance</th>
+                  <th>Monthly Leave Entitlement</th>
+                  <th>Monthly leave consumed</th>
+                  <th>Total working Days</th>
+                  <th>Year</th>
+                  <th>Month</th>
+                  <th>Leave current balance</th>
+                  <th>Total number of days encashment</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+              {%for fx in train%}
+                <tr class="success">
+                  <td>{{fx.First_Name}}</td>
+                  <td>{{fx.Last_Name}}</td>
+                  <td>{{fx.department}}</td>
+                  <td>{{fx.Leave_outstanding_balance}}</td>
+                  <td>{{fx.Monthly_Leave_entitlement}}</td>
+                  <td>{{fx.Monthly_leave_consumed}}</td>
+                  <td>{{fx.Total_working_days}}</td>
+                  <td>{{fx.Year}}</td>
+                  <td>{{fx.Month}}</td>
+                  <td>{{fx.Leave_current_balance}}</td>
+                  <td>{{fx.leave_encashment}}</td>
+
+
+                </tr>
+
+                {%endfor%}
+
+              </tbody>
+            </table>
+
+          </div>
+
+          {%endblock%}
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

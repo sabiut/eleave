@@ -1,0 +1,78 @@
+<html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Below you can view the list of all the Staff Leave History</p>
+{%endblock%}
+
+{%block content %}
+
+<table id="t01" >
+<tr>
+<th> Download History</th>
+<th>Leave History</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Leave outstanding balance</th>
+<th>Monthly Leave Entitlement</th>
+<th>Monthly leave consumed</th>
+<th>Year</th>
+<th>Month</th>
+<th>Leave current balance</th>
+
+</tr>
+{%for x in sum_currentbalance%}
+
+<tr>
+<td><a href ="/download_history/"><span class="glyphicon glyphicon-download-alt  "> </span></a></td>
+<td><a href="/leavehistory/"><span class="glyphicon glyphicon-folder-open "> </span></a></td>
+<td>{{x.First_Name}}</td>
+<td>{{x.Last_Name}}</td>
+  <td>{{x.Leave_outstanding_balance}}</td>
+  <td>{{x.Monthly_Leave_entitlement}}</td>
+  <td>{{x.Monthly_leave_consumed}}</td>
+  <td>{{x.Year}}</td>
+  <td>{{x.Month}}</td>
+   <td>{{x.Leave_current_balance}}</td>
+  
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>

@@ -1,0 +1,79 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+able, th, td {
+border: 1px solid Orange;
+border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+background-color: #fff;
+}
+table#t01 th {
+color: white;
+background-color: #999999;
+}
+
+
+
+table#t01 {
+width: 100%;
+background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Click on your name below to view your leave balance</p>
+{%endblock%}
+
+{%block content %}
+<p>Click on your name below to view your current leave balance. Contact Hr Office if you have any query regarding your leave balance.</p>
+
+<table id="t01">
+<tr>
+<th>ACSD Office</th>
+
+<tr>  <td><a href ="/Beneth_leavebalance1/"> Pedro Beneth Malites</a></td></tr>
+<tr><td><a href ="/Carolyn_leavebalance1/">Carolyn Lendal</a></td></tr>
+<tr><td><a href ="/Derek_leavebalance1/">Junior Derek Alexander</a></td> </tr>
+      <tr><td><a href ="/Florinda_leavebalance1/">Florinda Aru</a></td> </tr>
+          <tr><td><a href ="/Juanita_leavebalance1/">Juanita Vira</a></td></tr>
+            <tr><td><a href ="/Julia_leavebalance1/">Julia Iauma</a></td> </tr>
+            <tr><td><a href ="/Kenny_leavebalance1/">Kenny Loumai</a></td> </tr>
+                <tr><td><a href ="/Kensen_leavebalance1/">Kensen T. Seri</a></td> </tr>
+                      <tr>  <td><a href ="/Ruth_leavebalance1/">Ruth Kaltonga</a></td></tr>
+                          <tr><td><a href ="/Sussie_leavebalance1/">Sussie Joshua</a></td> </tr>
+                              <tr>  <td><a href ="/Shirly_leavebalance1/">Shirly Thomas</a></td></tr>
+                               <tr> <td><a href="/heva_leavebalance1/">Heva Alilee</a></td></tr>
+                                 <tr><td><a href="/Melonnie_leavebalance1/">Melonie N.Lester</a></td></tr>
+      <tr><td><a href="/semu_leavebalance1/">Semu Kalyp</a></td></tr>
+        <tr><td><a href="/Kasaia_leavebalance1/">Kasaia Kaltabang</a></td></tr>
+        <tr><td><a href="/Leinasei_leavebalance1/">Leinasei Lesly</a></td></tr>
+        <tr><td><a href="/Haggai_leavebalance1/">Cynthia Rona</a></td></tr>
+        <tr><td><a href="/Sereana_leavebalance1/">Sereana Marum</a></td></tr>
+        <tr><td><a href="/Nerry_leavebalance1/">Nerry Daniel</a></td></tr>
+
+
+
+
+</tr>
+
+</table>
+
+
+{% endblock %}
+</html>
+</body>

@@ -1,0 +1,49 @@
+    <html>
+
+
+<head>
+	
+
+<style type ="text/css">
+able, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+    
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #999999;
+} 
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+} 
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Click on your name below to view your leave balance</p>
+{%endblock%}
+
+{%block content %}
+
+<p>Your data was save successfully</p>
+
+
+{% endblock %}
+</html>
+</body>

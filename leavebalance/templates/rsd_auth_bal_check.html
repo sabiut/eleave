@@ -1,0 +1,69 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+able, th, td {
+border: 1px solid Orange;
+border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+background-color: #fff;
+}
+table#t01 th {
+color: white;
+background-color: #999999;
+}
+
+
+
+table#t01 {
+width: 100%;
+background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Click on your name below to view your leave balance</p>
+{%endblock%}
+
+{%block content %}
+<p>Click on your name below to view your current leave balance. Contact Hr Office if you have any query regarding your leave balance.</p>
+
+<table id="t01">
+<tr>
+<th>RSHD Office</th>
+<tr><td><a href ="/Alumeci_leavebalance1/">Alumeci Kaltonga</a></td></tr>
+<tr><td><a href ="/Arnold_leavebalance1/">Arold Bill</a></td></tr>
+  <tr><td><a href ="/cynthia_leavebalance1/">Cynthia A. Moli</a></td> </tr>
+        <tr><td><a href ="/Fabiano_leavebalance1/">Fabiano Vinabit</a></td> </tr>
+        <!--  <tr><td><a href ="/Jerry_leavebalance1/">Jerry Niatu </a></td> </tr>-->
+        <tr><td><a href ="/Joyin_leavebalance1/">Joylin Willie Bisiwei</a></td> </tr>
+    <tr><td><a href ="/Linda_leavebalance1/">Linda Daniel</a></td></tr>
+  <tr><td><a href ="/Mark_leavebalance1/">Mark A. Tamata</a></td></tr>
+<tr><td><a href ="/Pita_leavebalance1/">Pita T. Toa </a></td> </tr>
+<tr><td><a href ="/Robert_leavebalance1/">Robert Peter</a></td> </tr>
+<tr><td><a href ="/Gloria_leavebalance1/">Gloria Siri</a></td> </tr>
+<tr><td><a href ="/Lynette_leavebalance1/">Lynette Ragonmal</a></td> </tr>
+
+
+</tr>
+
+</table>
+
+
+{% endblock %}
+</html>
+</body>

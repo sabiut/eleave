@@ -1,0 +1,149 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+
+#main{
+width:910px;
+height:620px;
+margin:30px auto
+}
+</style>
+
+</head
+<body>
+
+ <!DOCTYPE html>
+<html>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <style type ="text/css">
+        #header {
+                        background-color:#11584A;
+                        color:white;
+                        text-align:center;
+                        padding:5px;
+                        width:2413px
+                        }
+        #nav {
+                    line-height:30px;
+                    background-color:#A3F679;
+                    height:1900px;
+                    width:300px;
+                    float:left;
+                    padding:55px;
+                    }
+
+        #section {
+                        width:550px;
+                        float:left;
+                        padding:20px;
+
+                        }
+        #footer {
+                        background-color:#11584A;
+                        color:white;
+                        clear:both;
+                        text-align:center;
+                        padding:5px;
+                        width:2413px
+                        }
+
+        #user{
+                    float:left;
+                    }
+
+</style>
+</head>
+
+<body>
+<div id="header">
+
+<h1>RBV eLeave Management System</h1>
+ <p>
+<p> Successfuly Recorded message</p>
+ </p>
+</div>
+
+
+<div id="nav">
+<hr>
+<font color="Orange"><a href ="/eLeave/loggedin/"<span class="glyphicon glyphicon-home"></span> Home</a></font><br>
+
+<a href ="/eLeave/"><span class="glyphicon glyphicon-link"> </span> Logout</a><br>
+
+
+<hr>
+
+<font color="Orange">Accounts Department</font><br>
+
+<a href="/encashment/"><span class="glyphicon glyphicon-book"></span> Leave Encashment</a><br>
+
+<hr class="my-10">
+
+<a href="/encashment_display/"><span class="glyphicon glyphicon-list"></span> Encashments</a><br>
+
+<hr class="my-10">
+
+<a href="/accounts/"><span class="glyphicon glyphicon-sort"></span> Update Encashments</a><br>
+
+<hr class="my-10">
+
+
+
+
+
+</div>
+
+<!--<div id="section">-->
+<div id="section">
+<h2><center><font color="Orange"> <span class="glyphicon glyphicon-align-justify "></span>  eLeave DashBoard</font></center></h2>
+<hr>
+
+
+
+
+<div id="main">
+<p class="lead">Congratulations!</p><br>
+<p class="lead"> You have successfuly uploaded the csvfile.Please click here to populate the database. </p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> file</th>
+
+  {% for a in documents%}
+  <tr>
+
+<td>{{a.Select_File}}</td>
+<td>{{a.description}}</td>
+  </tr>
+{%endfor%}
+</table>
+
+</div>
+
+
+
+
+</div>
+
+<div id="footer">
+Copyright © RBV eLeave Management System 2014
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+    <html>
+
+
+<head>
+
+
+<style type ="text/css">
+able, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #999999;
+}
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Click on your name below to view your leave balance</p>
+{%endblock%}
+
+{%block content %}
+<p>Click on your name below to view your current leave balance. Contact Hr Office if you have any query regarding your leave balance.</p>
+
+<table id="t01">
+<tr>
+   <th>FISD Office</th>
+
+    <tr>  <td><a href ="/Alex_leavebalance/">Alex M. Bisiwel</a></td></tr>
+    <tr><td><a href ="/Florinda_leavebalancefisd/">Flrida Philip</a></td></tr>
+     <tr>  <td><a href ="/Holyoake_leavebalance/">Holyoake Bule</a></td></tr>
+         <tr><td><a href ="/John_leavebalance/">John Tabiusu</a></td> </tr>
+             <tr><td><a href ="/Jenny_leavebalance/">Jenny Willie</a></td> </tr>
+             <tr>  <td><a href ="/Marinet_leavebalance/">Marinet Abbil</a></td></tr>
+              <tr><td><a href ="/MMark_leavebalance/">Mark Mera</a></td> </tr>
+             <tr><td><a href ="/Nancy_leavebalance/">Nancy Mabon</a></td> </tr>
+    <tr><td><a href ="/Noel_leavebalance/">Noel Vari</a></td></tr>
+    <tr><td><a href ="/Noelyn_leavebalance/">Noelyne Woi</a></td> </tr>
+
+
+
+
+</tr>
+
+   </table>
+
+
+{% endblock %}
+</html>
+</body>

@@ -1,0 +1,76 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+able, th, td {
+border: 1px solid Orange;
+border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+background-color: #fff;
+}
+table#t01 th {
+color: white;
+background-color: #999999;
+}
+
+
+
+table#t01 {
+width: 100%;
+background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Click on your name below to view your leave balance</p>
+{%endblock%}
+
+{%block content %}
+<p>Click on your name below to view your current leave balance. Contact Hr Office if you have any query regarding your leave balance.</p>
+
+<table id="t01">
+<tr>
+<th>FMKD Office</th>
+<tr><td><a href ="/Albert_leavebalance1/">Albert Bena</a></td> </tr>
+<tr><td><a href ="/Alison_leavebalance1/">Alison N. Baniuri</a></td> </tr>
+  <tr><td><a href ="/Frederic_leavebalance1/">Frederic Jacob</a></td> </tr>
+    <tr><td><a href ="/Johncy_leavebalance1/">Johncy W. Bebe</a></td></tr>
+        <tr><td><a href ="/Lynrose_leavebalance1/">Lynrose Stephens</a></td> </tr>
+        <tr><td><a href ="/philip_leavebalance1/">Philip Arubilake </a></td></tr>
+    <tr><td><a href ="/robinsion_leavebalance1/">Robinsion Tomniavia</a></td></tr>
+<tr><td><a href ="/Simon_leavebalance1/">Simon Tiwok</a></td> </tr>
+<tr><td><a href ="/Tonny_leavebalance1/">Tonny Garae</a></td> </tr>
+<tr>  <td><a href ="/Vicky_leavebalance1/">Vicky Barang</a></td></tr>
+<tr>  <td><a href ="/Juliana_leavebalance1/">Juliana Malasikoto</a></td></tr>
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+</table>
+
+
+{% endblock %}
+</html>
+</body>

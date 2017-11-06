@@ -1,0 +1,55 @@
+
+
+{% extends "dashboard.html"%}
+
+{%block content%}
+{% load mathfilters %}
+<h3 class="text-primary">Forex Revaluation - Asset <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+</h3>
+<table class="table table-striped">
+  <thead>
+<tr>
+
+
+  <th><span class="glyphicon glyphicon-edit" > </span> Edit Record</th>
+  <th>Account Number</th>
+  <th>Acc Description</th>
+  <th>VATU Balance</th>
+  <th> GL Rate</th>
+  <th>FCY Balance</th>
+    <th>Curency</th>
+  <th> Vatu Revaluation</th>
+  <th>Rate</th>
+  <th>Vatu Gain/Loss</th>
+  <th>Current Date</th>
+
+
+</thead>
+
+</tr>
+{%for a in results%}
+
+<tr>
+
+<td><a href ="/update_Leaveform/{{ a.id}}/"><span class="glyphicon glyphicon-edit"></span></a> </td>
+
+
+<td>10102002CORP</td>
+  <td>AUD ANZ Current a/c</td>
+  <td>VT {{a.1}}</td>
+  <td>{{a.1|div:a.0}}</td>
+<td>AUD {{a.0}}</td>
+  <td>AUD</td>
+    <th></td>
+    <td>{{a.rate}}</td>
+    <th></th>
+    <td> {% now "jS F Y " %}</td>
+
+
+
+
+  </tr>
+
+{%endfor%}
+</table>
+{%endblock%}

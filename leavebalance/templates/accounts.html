@@ -1,0 +1,123 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <style type ="text/css">
+        #header {
+                        background-color:#11584A;
+                        color:white;
+                        text-align:center;
+                        padding:5px;
+                        width:2413px
+                        }
+        #nav {
+                    line-height:30px;
+                    background-color:#A3F679;
+                    height:1900px;
+                    width:300px;
+                    float:left;
+                    padding:55px;
+                    }
+
+        #section {
+                        width:550px;
+                        float:left;
+                        padding:20px;
+
+                        }
+        #footer {
+                        background-color:#11584A;
+                        color:white;
+                        clear:both;
+                        text-align:center;
+                        padding:5px;
+                        width:2413px
+                        }
+
+        #user{
+                    float:left;
+                    }
+
+</style>
+</head>
+
+<body>
+<div id="header">
+
+<h1>RBV eLeave Management System</h1>
+ <p>{%block username%}Welcome {{full_name}} :) How're you doing?{%endblock%} </p>
+</div>
+
+
+<div id="nav">
+<hr>
+<font color="Orange"><a href ="/eLeave/loggedin/"<span class="glyphicon glyphicon-home"></span> Home</a></font><br>
+
+<a href ="/eLeave/"><span class="glyphicon glyphicon-link"> </span> Logout</a><br>
+
+
+<hr>
+
+<font color="Orange">Accounts Department</font><br>
+
+<a href="/encashment/"><span class="glyphicon glyphicon-book"></span> Leave Encashment</a><br>
+
+<hr class="my-10">
+
+<a href="/encashment_display/"><span class="glyphicon glyphicon-list"></span> View Encashments</a><br>
+
+<hr class="my-10">
+
+<a href="/accounts/"><span class="glyphicon glyphicon-sort"></span> Update Encashments</a><br>
+
+<hr class="my-10">
+
+
+
+
+
+</div>
+
+<!--<div id="section">-->
+<div id="section">
+<h2><center><font color="Orange"> <span class="glyphicon glyphicon-align-justify "></span>  eLeave DashBoard</font></center></h2>
+<hr>
+
+
+
+{% block content%}
+<!--<p><center> <b>User Guide </b></center></p>-->
+<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4">Leave Encashment</h1>
+  <p class="lead">Please click on the update encashment button below to post the encashment details after issuing the cheque.</p>
+  <hr class="my-4">
+
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/encashment/" role="button">Update encashment</a>
+  </p>
+</div>
+</div>
+
+{%endblock%}
+
+
+</div>
+
+<div id="footer">
+Copyright © RBV eLeave Management System 2014
+</div>
+</body>
+</html>

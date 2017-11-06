@@ -1,0 +1,41 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+
+#main{
+width:910px;
+height:620px;
+margin:30px auto
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Please fill up all the necessary fields before saving the records</p>
+{%endblock%}
+
+{%block content %}
+<p><b> Please note: </b>when you enter the <font color="red">Total working days</font> field below, do not include weekends and public holidays. Only enter the Total number of working days. The start date and end date field, should be in this format:  <font color="red">Year-Month-Day eg:2015-2-15</font></p>
+
+<div id="main">
+<form action ="/leaveapplication/" method="post">{%csrf_token%}
+<table>
+{{form.as_table}}
+</table>
+<br>
+<input type="submit" name="submit" value="Apply for Leave" >
+</form>
+
+</div>
+
+{% endblock %}
+</html>
+</body>

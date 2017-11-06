@@ -1,0 +1,84 @@
+<html>
+
+
+<head>
+
+
+<style type ="text/css">
+
+table, th, td {
+    border: 1px solid Orange;
+    border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #11584A;
+}
+
+
+
+table#t01 {
+    width: 100%;
+    background-color: #f1f1c1;
+}
+</style>
+
+</head
+<body>
+{% extends "hr_office.html"%}
+
+{%block username%}
+<p> Leave encashments</p>
+{%endblock%}
+
+{% block content%}
+<h2 class="text-info"> <span class="glyphicon glyphicon-flag"></span> Leave Payout</h2>
+<hr class="my-10">
+<table id="t01" >
+<tr>
+
+
+  <!--<th><span class="glyphicon glyphicon-edit" > </span> Edit Record</th>-->
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Number of Days Paid</th>
+  <th>Cheque Number</th>
+  <th>Payment Amount</th>
+    <th>Payment Date</th>
+  <th>Encashment Updated By</th>
+
+
+
+
+</tr>
+{%for a in encash%}
+<tr>
+<!--<td><a href ="#"><input type="checkbox" onClick="parent.location='#'" > </a> </td>-->
+<!--<td>{{a.id}}</td>-->
+<!--<td><a href ="/update_form/{{ a.id}}/">{{a.username}}</a></td>-->
+
+<!--<td><a href ="/update_Leaveform/{{ a.id}}/"><span class="glyphicon glyphicon-edit"></span></a> </td>-->
+<td>{{a.First_Name}}</td>
+  <td>{{a.Last_Name}}</td>
+  <td>{{a.Number_of_days_paid}}</td>
+<td>{{a.cheque_number}}</td>
+  <td>{{a.Payment_amount}}</td>
+  <td>{{a.Payment_date}}</td>
+  <td>{{a.encashment_updated_by}}</td>
+
+
+  </tr>
+{%endfor%}
+</table>
+
+{% endblock %}
+</html>
+</body>
