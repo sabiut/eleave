@@ -1,0 +1,37 @@
+    <html>
+
+
+<head>
+
+
+<style type ="text/css">
+
+#main{
+width:910px;
+height:620px;
+margin:30px auto
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Please fill up all the necessary fields before submitting your leave Application</p>
+{%endblock%}
+
+{%block content %}
+<h2><center><font color="Orange"><span class="glyphicon glyphicon-align-justify"></span>  eLeave DashBoard</font></center></h2>
+<hr>
+
+<div id="main">
+<p class="text-primary">You have successfully Authorized the Leave Applicaion.</p>
+<p>An email has been send to inform the Leave Applicant.</p>
+
+</div>
+
+{% endblock %}
+</html>
+</body>

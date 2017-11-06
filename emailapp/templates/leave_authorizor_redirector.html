@@ -1,0 +1,35 @@
+    <html>
+
+
+<head>
+	
+
+<style type ="text/css">
+
+#main{
+width:910px;
+height:620px;
+margin:30px auto
+}
+</style>
+
+</head
+<body>
+
+{% extends "loggedin.html"%}
+
+{%block username%}
+<p> Please note that only HR Office have access to this page.</p>
+{%endblock%}
+
+{%block content %}
+
+<div id="main">
+<p>Hi {{full_name}},  You are not authorized to access this page.This page is restricted for leave authorizors within this department only. Please contact the eLeave system administrator for more info.</p>
+
+
+</div>
+
+{% endblock %}
+</html>
+</body>
