@@ -16,14 +16,14 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 #EMAIL_PORT =EMAIL_PORT
 #EMAIL_USE_TLS=True
 #EMAIL_HOST='smtp.sendgrid.net'
-#EMAIL_HOST_USER='sabiut'
-#EMAIL_HOST_PASSWORD='123!@#'
+#EMAIL_HOST_USER='sendgrid_sabiut'
+#EMAIL_HOST_PASSWORD='sendgrid_password'
 #EMAIL_PORT =587
 
-
+#enter your sendgrid username and password
 EMAIL_BACKEND = "sgbackend.SendGridBackend"
-SENDGRID_USER = "sabiut"
-SENDGRID_PASSWORD = "!@#123"
+SENDGRID_USER = "sendgrid_username"
+SENDGRID_PASSWORD = "sendgrid_password"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -75,9 +75,9 @@ ROOT_URLCONF = 'webapp.urls'
 
 WSGI_APPLICATION = 'webapp.wsgi.application'
 
-TEMPLATE_DIRS = ( '/var/www/html/webapp/eLeave/templates',
+TEMPLATE_DIRS = ( '/var/www/projects/webapp/eLeave/templates',
                   '/var/www/projects/webapp/emailapp/templates',
-                  '/var/www/html/webapp/leavebalance/templates',
+                  '/var/www/projects/webapp/leavebalance/templates',
 
 )
 
