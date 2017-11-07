@@ -16,14 +16,14 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 #EMAIL_PORT =EMAIL_PORT
 #EMAIL_USE_TLS=True
 #EMAIL_HOST='smtp.sendgrid.net'
-#EMAIL_HOST_USER='suabiut'
-#EMAIL_HOST_PASSWORD='Test123!@#'
+#EMAIL_HOST_USER='sabiut'
+#EMAIL_HOST_PASSWORD='123!@#'
 #EMAIL_PORT =587
 
 
 EMAIL_BACKEND = "sgbackend.SendGridBackend"
-SENDGRID_USER = "suabiut"
-SENDGRID_PASSWORD = "TesT!@#123"
+SENDGRID_USER = "sabiut"
+SENDGRID_PASSWORD = "!@#123"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
