@@ -22,7 +22,7 @@ django-sekizai==0.8.1
 djangocms-admin-style==0.2.5
 easy-thumbnails==2.2
 enum34==1.1.6
-html5lib==0.999
+html5lib==0.99999999
 idna==2.6
 ipaddress==1.0.18
 pyasn1==0.3.7
